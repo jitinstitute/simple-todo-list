@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="text-center my-2">List To Do</h1>
+    <hr />
+    <div class="container">
+      <div class="mb-3">
+        <label for="todoinput" class="form-label">Insert Your Todos</label>
+        <input
+          type="text"
+          class="form-control"
+          id="todoinput"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        id="addtolist"
+        onclick="addToList(event)"
+      >
+        Add to List
+      </button>
+    </div>
+    <div class="container mt-5">
+      <ul class="list-group" id="todolist">
+        <li class="list-group-item">
+          <div class="d-flex align-items-center justify-content-between">
+            <p class="mb-0">This is to do</p>
+            <div>
+              <button
+                class="btn btn-success btn-sm"
+                onclick="updateTodo(event)"
+              >
+                Update
+              </button>
+              <button class="btn btn-danger btn-sm" onclick="deleteTodo(event)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
